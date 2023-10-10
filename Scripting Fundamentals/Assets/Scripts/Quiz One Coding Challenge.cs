@@ -3,23 +3,33 @@ using System.Collections.Generic;
 using System.Runtime.CompilerServices;
 using UnityEngine;
 
-public class Variables : MonoBehaviour
+public class QuizOneCodingChallenge : MonoBehaviour
 {
     // Declaring Varaibles
     public int Score = 0;
     public string PlayerName = "Noah";
-    PlayerPrefs int _playerhealthAmount = 100f;
+    public int Health = 100;
     
     // Start is called before the first frame update
     void Start()
     {
-            
+        IncreaseScore();
+        PrintPlayerName();
+        DecreaseHealth();
     }
 
     // Update is called once per frame
     private void IncreaseScore(int amount)
     {
-        // using a local variable tp update the total score
-        _Score += amount;
+        Score = Score + amount;
+    }
+    private void PrintPlayerName()
+    {
+        Debug.Log(PlayerName);
+    }
+
+    private void DecreaseHealth()
+    {
+        Health = Health - 20;
     }
 }

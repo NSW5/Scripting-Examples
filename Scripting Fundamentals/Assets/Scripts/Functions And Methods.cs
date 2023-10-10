@@ -11,7 +11,7 @@ public class FunctionsAndMethods : MonoBehaviour
     //decalre our variables
     private AudioSource _audioSource;
     private float _speed = 10f;
-    private int _playerhealthAmount = 100f;
+    private float _playerhealthAmount = 100f;
 
     void Start()
     {
